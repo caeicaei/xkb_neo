@@ -12,13 +12,3 @@ xkb_symbols "alt_switch" {
   include "level3(lalt_switch)"
   include "level3(ralt_switch)"
 };
-
-// The left Alt key (while pressed) chooses the third shift level.
-partial modifier_keys
-xkb_symbols "lalt_switch" {
-  key <LALT> {
-    type[Group1]="ONE_LEVEL",
-    symbols[Group1] = [ ISO_Level3_Shift ]
-  };
-  include "level3(modifier_mapping)"
-};
